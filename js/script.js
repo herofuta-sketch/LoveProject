@@ -43,5 +43,4 @@ startBtn.addEventListener("click", () => {
     setTimeout(() => {
             window.location="question.html";
     },800);
-    }
 });
