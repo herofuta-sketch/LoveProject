@@ -26,20 +26,22 @@ function createHeart(){
     },8000);
 }
 setInterval(createHeart,250);
-const startBtn = 
-document.getElementById("startBtn");
-const music = 
-document.getElementById("bgMusic");
-startBtn.addEventListener(
-    "click",
-    function(){
-        music.play();
-        document
+const startBtn = document.getElementById("startBtn");
+const music = document.getElementById("bgMusic");
+startBtn.addEventListener("click", () => {
+    music.play()
+      .then(() => {
+        console.log("Nhạc đang phát");
+      })
+      .catch(error => {
+        console.error("Không phát được nhạc", error);
+      });
+    document
         .querySelector(".container")
         .classList
         .add("fadeOut");
-        setTimeout(function(){
+    setTimeout(() => {
             window.location="question.html";
-        },800);
+    },800);
     }
-);
+});
