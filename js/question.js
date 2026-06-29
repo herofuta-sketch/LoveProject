@@ -1,7 +1,7 @@
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 yesBtn.addEventListener("click",function(){
-    window.location="place.html";
+    window.location="date.html";
 });
 noBtn.addEventListener("mouseover",moveButton);
 function moveButton(){
